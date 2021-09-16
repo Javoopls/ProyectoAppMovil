@@ -8,8 +8,10 @@ import { AlertController } from '@ionic/angular';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+
   user:any
-  constructor(public alertController: AlertController,private activeRoute:ActivatedRoute,private router:Router) {
+
+  constructor(private alertController: AlertController, private activeRoute:ActivatedRoute, private router:Router) {
     this.activeRoute.queryParams.subscribe(params=>{
       if(this.router.getCurrentNavigation().extras.state){
         this.user=this.router.getCurrentNavigation().extras.state.user
@@ -18,16 +20,12 @@ export class HomePage {
     })
 
   }
-  
-  iniciar(){
-    this.presentAlert
-  }
 
   async presentAlert() {
     const alert = await this.alertController.create({
       cssClass: 'my-custom-class',
-      header: 'Iniciando viaje...',
-      message: 'Buscando conductor...',
+      header: 'Iniciando Viaje...',
+      message: 'Buscando Conductor...',
       buttons: ['OK']
     });
 
