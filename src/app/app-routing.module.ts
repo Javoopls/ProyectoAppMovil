@@ -22,11 +22,7 @@ const routes: Routes = [
   {
     path: 'registro',
     loadChildren: () => import('./pages/registro/registro.module').then( m => m.RegistroPageModule)
-  },
-  {
-    path: 'rest',
-    loadChildren: () => import('./pages/rest/rest.module').then( m => m.RestPageModule)
-  },
+  }
 
 
 ];

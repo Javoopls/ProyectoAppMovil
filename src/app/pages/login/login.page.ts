@@ -30,10 +30,6 @@ export class LoginPage implements OnInit {
     this.router.navigate(['/registro']);
   }
 
-  api(){
-    this.router.navigate(['/rest']);
-  }
-
   home(){
     this.presentLoading();
     let navigationExtra: NavigationExtras={
