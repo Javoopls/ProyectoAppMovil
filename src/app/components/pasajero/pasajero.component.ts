@@ -1,16 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
-import { ViewChild, ElementRef } from '@angular/core';
 
 declare var google: any;
 
 @Component({
-  selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  selector: 'app-pasajero',
+  templateUrl: './pasajero.component.html',
+  styleUrls: ['./pasajero.component.scss'],
 })
-export class HomePage {
+export class PasajeroComponent implements OnInit {
 
   map: any;
   user: any;
@@ -27,11 +26,7 @@ export class HomePage {
     this.router.navigate(['home/pasajero'])
   }
 
-  segmentChanged($event){
-    console.log($event)
-    let direccion=$event.detail.value
-    this.router.navigate(['home/'+direccion])
-  }
+  ngOnInit() {}
 
   ionViewDidEnter(){
     this.mostrarMapa();

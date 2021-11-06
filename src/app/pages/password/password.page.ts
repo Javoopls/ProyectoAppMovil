@@ -9,6 +9,8 @@ import { AlertController, ToastController } from '@ionic/angular';
 })
 export class PasswordPage implements OnInit {
 
+  user:''
+
   constructor(public toastController: ToastController , private router: Router, private alertController: AlertController) { }
 
   ngOnInit() {
@@ -17,6 +19,10 @@ export class PasswordPage implements OnInit {
   login(){
     this.presentAlert()
     this.router.navigate(['/login'])
+  }
+
+  onSubmitTemplate(){
+    console.log('Form submit');
   }
 
   async presentAlert() {

@@ -9,9 +9,7 @@
     <ion-card class="ion-text-center">
         <ion-card-title class="ion-text-center">
             <ion-label>
-              <br>
-              <h1>Bienvenido</h1>
-              <img src="/assets/icon/logo.png"/>
+                <h1>Crear Usuario</h1>
             </ion-label>
         </ion-card-title>
         <ion-card-content>
@@ -24,11 +22,7 @@
             </ion-item>
           </form>
         </ion-card-content>
-        <ion-button shape="block" (click)="home()" [disabled]="formulario.invalid">Iniciar Sesión</ion-button>
-        <br>
-        <ion-button shape="block" (click)="newUser()">Crear Usuario</ion-button>
-        <ion-button shape="block" (click)="resetPass()">Restablecer Contraseña</ion-button>
-        <ion-button shape="block" (click)="api()">API</ion-button>
+        <ion-button shape="block" (click)="guardar()" [disabled]="formulario.invalid">Guardar</ion-button>
     </ion-card>
   </div>
 </ion-content>
